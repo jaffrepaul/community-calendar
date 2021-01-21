@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="/css/styles.css" />
 		<link rel="stylesheet" href="/css/navbar.css" />
 		<link rel="stylesheet" href="/css/events.css" />
+		<link rel="stylesheet" href="/css/elements.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Source+Code+Pro:ital,wght@0,400;0,600;1,500;1,600&display=swap"
@@ -30,7 +31,7 @@
 			<main class="events-page">
 				<h1>{{ title }}</h1>
 				<small> {% if speakers %} {{ speakers | join: ', ' }} &middot; {% endif %} {{ date }} </small>
-				{{ addToCalendarList }} {{ content }}
+				{{ addToCalendarList }} {% include partials/join-discord-button.html %} {{ content }}
 				<p>Join this event <a href="https://discord.com/invite/q9ZdBgP">in Discord</a></p>
 			</main>
 		</div>
