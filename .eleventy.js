@@ -66,7 +66,7 @@ module.exports = (eleventyConfig) => {
 	});
 
 	eleventyConfig.addFilter('pageSourcePath', function (inputPath) {
-		return `https://github.com/LunchDevCommunity/community-calendar/tree/main/${inputPath.replace('./', '')}`;
+		return `https://github.com/LunchDevCommunity/community-calendar/edit/main/${inputPath.replace('./', '')}`;
 	});
 
 	if (isProduction) {
